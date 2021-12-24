@@ -17,7 +17,7 @@ namespace CLHCodeChallenge
 
             //Console.WriteLine(CountingValleys.countingValleys(steps, path));
 
-            Console.WriteLine(LongestValidParentheses2.GetLongestValid("(())(((()()))"));
+            Console.WriteLine(LongestValidParentheses.GetLongestValid("(())(((()()))"));
 
             
         }

@@ -11,31 +11,52 @@ namespace CLHCodeChallenge
         public static int GetLongestValid(string input)
         {
             int longestValid = 0;
-            int oldLongest = 0;
-            int r = 1;
-            for(int i = 0; i < input.Length; i+=r)
+
+            //Get all possible substring..
+            List<string> allSubStrings = new List<string>();
+            for (int i = 0; i < input.Length; ++i)
             {
-                r = 1;
-                if(input[i] == '(' && input[i+1] == ')')
+                StringBuilder subString = new StringBuilder(input.Length - i);
+                for (int j = i; j < input.Length; ++j)
                 {
-                    longestValid += 2;
-                    r = 2;
+                    subString.Append(input[j]);
+                    allSubStrings.Add(subString.ToString());
                 }
-                else
-                {
-                    if(oldLongest < longestValid)
-                    {
-                        oldLongest = longestValid;
-                    }
-                    longestValid = 0;
-                }
-            }
-            if (oldLongest < longestValid)
-            {
-                oldLongest = longestValid;
             }
 
-            return oldLongest;
+            //Compare the length of all the valid substrings...
+            foreach (var str in allSubStrings)
+            {
+                if (IsValid(str))
+                {
+                    if (longestValid < str.Length)
+                    {
+                        longestValid = str.Length;
+                    }
+                }
+            }
+            return longestValid;
+        }
+
+        private static bool IsValid(string subString)
+        {
+            int count = 0;
+            for (int i = 0; i < subString.Length; i++)
+            {
+                if (subString[i] == '(')
+                {
+                    count++;
+                }
+                else if (subString[i] == ')')
+                {
+                    count--;
+                }
+                if (count < 0)
+                {
+                    return false;
+                }
+            }
+            return count == 0 ? true : false;
         }
     }
 }
