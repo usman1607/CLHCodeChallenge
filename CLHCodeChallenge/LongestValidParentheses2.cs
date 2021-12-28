@@ -12,26 +12,19 @@ namespace CLHCodeChallenge
         {
             int longestValid = 0;
 
-            //Get all possible substring..
-            List<string> allSubStrings = new List<string>();
+            //Get all possible substring and compare  the length of all the valid substring ..
             for (int i = 0; i < input.Length; ++i)
             {
                 StringBuilder subString = new StringBuilder(input.Length - i);
                 for (int j = i; j < input.Length; ++j)
                 {
                     subString.Append(input[j]);
-                    allSubStrings.Add(subString.ToString());
-                }
-            }
-
-            //Compare the length of all the valid substrings...
-            foreach(var str in allSubStrings)
-            {
-                if(IsValid(str))
-                {
-                    if(longestValid < str.Length)
+                    if (IsValid(subString.ToString()))
                     {
-                        longestValid = str.Length;
+                        if (longestValid < subString.Length)
+                        {
+                            longestValid = subString.Length;
+                        }
                     }
                 }
             }
