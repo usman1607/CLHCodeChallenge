@@ -14,20 +14,30 @@ namespace CLHCodeChallenge
             int row = input.GetLength(0) - 1;
             int col = input.GetLength(1) - 1;
 
+            //Get all matrixes
             List<int[,]> mtxs = new List<int[,]>();
-            for (int i = row; i >= 0; i--)
+            for(int i = row; i >= 0; i--)
             {
                 for (int j = col; j >= 0; j--)
                 {
                     int[,] mtx = new int[i, j];
                     mtxs.Add(mtx);
                 }
-                
+                          
             }
 
+            //Assign value and chech the area...
 
+            for (int i = row; i >= 0; i--)
+            {
+                for (int j = col; j >= 0; j--)
+                {
+                    int[,] mtx = new int[i, j];
+                    
+                }
 
-                return max;
+            }
+            return max;
         }
 
         private static int sum(int[,] mtx)

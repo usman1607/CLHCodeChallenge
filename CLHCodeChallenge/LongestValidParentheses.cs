@@ -6,57 +6,36 @@ using System.Threading.Tasks;
 
 namespace CLHCodeChallenge
 {
-    public class LongestValidParentheses
+    public class LongestValidParentheses          //This will not check if the parentheses were nexted....
     {
         public static int GetLongestValid(string input)
         {
             int longestValid = 0;
-
-            //Get all possible substring..
-            List<string> allSubStrings = new List<string>();
-            for (int i = 0; i < input.Length; ++i)
+            int oldLongest = 0;
+            int r = 1;
+            for(int i = 0; i < input.Length; i+=r)
             {
-                StringBuilder subString = new StringBuilder(input.Length - i);
-                for (int j = i; j < input.Length; ++j)
+                r = 1;
+                if(input[i] == '(' && input[i+1] == ')')
                 {
-                    subString.Append(input[j]);
-                    allSubStrings.Add(subString.ToString());
+                    longestValid += 2;
+                    r = 2;
                 }
-            }
-
-            //Compare the length of all the valid substrings...
-            foreach (var str in allSubStrings)
-            {
-                if (IsValid(str))
+                else
                 {
-                    if (longestValid < str.Length)
+                    if(oldLongest < longestValid)
                     {
-                        longestValid = str.Length;
+                        oldLongest = longestValid;
                     }
+                    longestValid = 0;
                 }
             }
-            return longestValid;
-        }
-
-        private static bool IsValid(string subString)
-        {
-            int count = 0;
-            for (int i = 0; i < subString.Length; i++)
+            if (oldLongest < longestValid)
             {
-                if (subString[i] == '(')
-                {
-                    count++;
-                }
-                else if (subString[i] == ')')
-                {
-                    count--;
-                }
-                if (count < 0)
-                {
-                    return false;
-                }
+                oldLongest = longestValid;
             }
-            return count == 0 ? true : false;
+
+            return oldLongest;
         }
     }
 }
