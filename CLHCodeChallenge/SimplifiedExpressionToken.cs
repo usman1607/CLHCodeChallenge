@@ -22,54 +22,56 @@ namespace CLHCodeChallenge
             {
                 answer = "[]";
             }
-
-            for(int i = 0; i < exp.Length; i++)
+            else
             {
-                int num = 0;
-                if (exp[i].Equals(vars))
+                for (int i = 0; i < exp.Length; i++)
                 {
-                    count++;
-                }
-                else if (int.TryParse(exp[i], out num))
-                {
-                    if (i != 0 && exp[i - 1].Equals("+")) result += num;
-
-                    if (i != 0 && exp[i - 1].Equals("-")) result -= num;
-
-                    if (i != 0 && exp[i - 1].Equals("*")) result *= num;
-                }
-                else if (exp[i].Equals("+"))
-                {
-                    continue;
-                }
-                else if (exp[i].Equals("-"))
-                {
-                    continue;
-                }
-                else if (exp[i].Equals("*"))
-                {
-                    continue;
-                }
-                else
-                {
-                    string str = "";
-                    if(i != 0 && exp[i - 1].Equals("-"))
+                    int num = 0;
+                    if (exp[i].Equals(vars))
                     {
-                        str = pre+exp[i];
-                        token.Append(str);
+                        count++;
+                    }
+                    else if (int.TryParse(exp[i], out num))
+                    {
+                        if (i != 0 && exp[i - 1].Equals("+")) result += num;
+
+                        if (i != 0 && exp[i - 1].Equals("-")) result -= num;
+
+                        if (i != 0 && exp[i - 1].Equals("*")) result *= num;
+                    }
+                    else if (exp[i].Equals("+"))
+                    {
+                        continue;
+                    }
+                    else if (exp[i].Equals("-"))
+                    {
+                        continue;
+                    }
+                    else if (exp[i].Equals("*"))
+                    {
+                        continue;
                     }
                     else
                     {
-                        str = pre1 + exp[i];
-                        token.Append(str);
+                        string str = "";
+                        if (i != 0 && exp[i - 1].Equals("-"))
+                        {
+                            str = pre + exp[i];
+                            token.Append(str);
+                        }
+                        else
+                        {
+                            str = pre1 + exp[i];
+                            token.Append(str);
+                        }
+
                     }
-                    
                 }
+
+                result += (count * ints);
+
+                answer = $"[\"{token}\", \"{result}\"]";
             }
-
-            result += (count * ints);
-
-            answer = $"[\"{token}\", \"{result}\"]";
 
             return answer;
         }
