@@ -10,16 +10,18 @@ namespace CLHCodeChallenge
     {
         public static string ExpressionToken(string expression, string vars, int ints)
         {
-            expression.Replace(" ", "");
-
+            string answer = "";
             var exp = expression.Split(" ");
             var token = new StringBuilder();
-            //var token = "";
             var result = 0;
-            //var lastNum = 0;
             var count = 0;
             var pre = "-1*";
             var pre1 = "*";
+
+            if(exp.Length == 1 && exp[0] == "0")
+            {
+                answer = "[]";
+            }
 
             for(int i = 0; i < exp.Length; i++)
             {
@@ -67,8 +69,9 @@ namespace CLHCodeChallenge
 
             result += (count * ints);
 
+            answer = $"[\"{token}\", \"{result}\"]";
 
-            return $"[\"{token}\", \"{result}\"]";
+            return answer;
         }
     }
 }
