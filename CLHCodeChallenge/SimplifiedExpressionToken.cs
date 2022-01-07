@@ -10,7 +10,7 @@ namespace CLHCodeChallenge
     {
         public static string ExpressionToken(string expression, string vars, int ints)
         {
-            string answer = "";
+            string answer;
             var exp = expression.Split(" ");
             var token = new StringBuilder();
             var result = 0;
