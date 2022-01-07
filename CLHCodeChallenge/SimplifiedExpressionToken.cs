@@ -31,14 +31,15 @@ namespace CLHCodeChallenge
 
                     if (i != 0 && exp[i - 1].Equals("-")) result -= num;
 
-                    if (i != 0 && exp[i - 1].Equals("-")) result -= num;
+                    if (i != 0 && exp[i - 1].Equals("*")) result *= num;
                 }
-                else if (exp[i].Equals(""))
+                else if (exp[i].Equals("+"))
                 {
 
                 }
             }
 
+            result += (count * ints);
 
 
             return $"[\"{token}\", \"{result}\"]";
