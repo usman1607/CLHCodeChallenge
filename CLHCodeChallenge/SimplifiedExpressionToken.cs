@@ -14,9 +14,12 @@ namespace CLHCodeChallenge
 
             var exp = expression.Split(" ");
             var token = new StringBuilder();
+            //var token = "";
             var result = 0;
             //var lastNum = 0;
             var count = 0;
+            var pre = "-1*";
+            var pre1 = "*";
 
             for(int i = 0; i < exp.Length; i++)
             {
@@ -35,8 +38,30 @@ namespace CLHCodeChallenge
                 }
                 else if (exp[i].Equals("+"))
                 {
-
-
+                    continue;
+                }
+                else if (exp[i].Equals("-"))
+                {
+                    continue;
+                }
+                else if (exp[i].Equals("*"))
+                {
+                    continue;
+                }
+                else
+                {
+                    string str = "";
+                    if(i != 0 && exp[i - 1].Equals("-"))
+                    {
+                        str = pre+exp[i];
+                        token.Append(str);
+                    }
+                    else
+                    {
+                        str = pre1 + exp[i];
+                        token.Append(str);
+                    }
+                    
                 }
             }
 
