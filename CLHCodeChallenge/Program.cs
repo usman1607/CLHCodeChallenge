@@ -22,14 +22,20 @@ namespace CLHCodeChallenge
             //Console.WriteLine(AreaOfLargestRectangle.LargestArea(input));
 
 
-            //int[] input = { 7, 9, 3, 4, 5, 6 };
+            //int[] input = { 1, 0, 0, 3, 0, 4, 5, 0 };
             //Console.WriteLine(MaximumPossibleSumOfPizzaSlice.MaximumSum(input));
 
-            var expression = "e + 8 - a + b + 5 * 2";
-            var vars = "e";
-            var ints = 1;
+            /* var expression = "4 + 5 * 2";
+             var vars = "e";
+             var ints = 1;
+             Console.WriteLine(SimplifiedExpressionToken.ExpressionToken(expression, vars, ints));*/
 
-            Console.WriteLine(SimplifiedExpressionToken.ExpressionToken(expression, vars, ints));
+            int[] input = { 1, 0, 0, 3, 0, 4, 5, 0 };
+            //int[] input = { 1, 0, 2, 3, 0, 4, 5, 0 };
+            //int[] input = { 1, 0, 3, 2};
+            DuplicateZeroOccurrence.DuplicateZeros3(input);
+            Console.WriteLine(string.Join(",", input));
+
 
         }
 
