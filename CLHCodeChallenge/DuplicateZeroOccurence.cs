@@ -37,6 +37,7 @@ namespace CLHCodeChallenge
             {
                 if (arr[i] == 0 && i < arr.Length - 1)
                 {
+                    //duplicate the zero and shift to the back...
                     for(int j = arr.Length-1; j > i+1; j--)
                     {
                         arr[j] = arr[j - 1];
@@ -53,6 +54,7 @@ namespace CLHCodeChallenge
             {
                 if (arr[i] == 0)
                 {
+                    //re-assign to the array from the back while removing the last element and duplicate the zero...
                     for (int j = arr.Length - 1; j > i; j--)
                     {
                         arr[j] = arr[j - 1];
