@@ -43,5 +43,40 @@ namespace CLHCodeChallenge
 
             return containOdd ? result + 1 : result;
         }
+
+        //Without dictionary...
+        public static int LongestPalindromeLength2(string str)
+        {
+            var result = 0;
+            var containOdd = false;
+            var box = new StringBuilder();
+            for(int i = 0; i < str.Length; i++)
+            {
+                int count = 0;
+                if (box.ToString().IndexOf(str[i]) == -1)
+                {
+                    count = 1;
+                    box.Append(str[i]);
+                    for(int j = i + 1; j < str.Length; j++)
+                    {
+                        if (str[i] == str[j])
+                            count++;
+                    }
+                }
+
+                if (count % 2 == 0)
+                {
+                    result += count;  
+                }
+                else
+                {
+                    result += count - 1;
+                    containOdd = true;     
+                }
+            }
+
+            return containOdd ? result + 1 : result;
+        }
+
     }
 }

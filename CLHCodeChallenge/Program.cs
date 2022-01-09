@@ -37,7 +37,8 @@ namespace CLHCodeChallenge
             //Console.WriteLine(string.Join(",", input));
 
 
-            Console.WriteLine(LongestPalindromeInAString.LongestPalindromeLength("aabaabb"));
+            Console.WriteLine(LongestPalindromeInAString.LongestPalindromeLength2("abccccdd"));
+
 
         }
 
