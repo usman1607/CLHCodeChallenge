@@ -35,8 +35,8 @@ namespace CLHCodeChallenge
                 }
                 else
                 {
-                    result += value - 1;
-                    containOdd = true;     //If there is at least one odd number add the 1 to the final result...
+                    result += value - 1;     
+                    containOdd = true;     //If there is at least one odd number add the number - 1 and add 1 to the final result...
                 }
                     
             }
