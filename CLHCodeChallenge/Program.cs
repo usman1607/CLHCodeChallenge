@@ -37,7 +37,13 @@ namespace CLHCodeChallenge
             //Console.WriteLine(string.Join(",", input));
 
 
-            Console.WriteLine(LongestPalindromeInAString.LongestPalindromeLength2("abccccdd"));
+            //Console.WriteLine(LongestPalindromeInAString.LongestPalindromeLength2("abba"));
+
+
+            //int[] input = { 1, 2, 6, 4, 8, 3, 5, 0, 7 };
+            //int[] input = { 0,1 };
+            int[] input = { 1, 0, 3 };
+            Console.WriteLine(MissingNumberInTheRang.MissingNumber(input));
 
 
         }
