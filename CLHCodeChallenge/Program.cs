@@ -30,12 +30,14 @@ namespace CLHCodeChallenge
              var ints = 1;
              Console.WriteLine(SimplifiedExpressionToken.ExpressionToken(expression, vars, ints));*/
 
-            int[] input = { 1, 0, 0, 3, 0, 4, 5, 0 };
+            //int[] input = { 1, 0, 0, 3, 0, 4, 5, 0 };
             //int[] input = { 1, 0, 2, 3, 0, 4, 5, 0 };
             //int[] input = { 1, 0, 3, 2};
-            DuplicateZeroOccurrence.DuplicateZeros3(input);
-            Console.WriteLine(string.Join(",", input));
+            //DuplicateZeroOccurrence.DuplicateZeros3(input);
+            //Console.WriteLine(string.Join(",", input));
 
+
+            Console.WriteLine(LongestPalindromeInAString.LongestPalindromeLength("ggttreeiiiiottqtxt"));
 
         }
 
