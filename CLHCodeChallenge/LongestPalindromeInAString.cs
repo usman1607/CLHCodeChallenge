@@ -34,7 +34,11 @@ namespace CLHCodeChallenge
                     result += value;   //Add all the values that are even numbers...
                 }
                 else
+                {
+                    result += value - 1;
                     containOdd = true;     //If there is at least one odd number add the 1 to the final result...
+                }
+                    
             }
 
             return containOdd ? result + 1 : result;

@@ -37,7 +37,7 @@ namespace CLHCodeChallenge
             //Console.WriteLine(string.Join(",", input));
 
 
-            Console.WriteLine(LongestPalindromeInAString.LongestPalindromeLength("ggttreeiiiiottqtxt"));
+            Console.WriteLine(LongestPalindromeInAString.LongestPalindromeLength("aabaabb"));
 
         }
 
