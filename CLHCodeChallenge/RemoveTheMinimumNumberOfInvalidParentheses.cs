@@ -12,7 +12,8 @@ namespace CLHCodeChallenge
         {
             Console.WriteLine(input);
             var str = input.ToCharArray();
-            List<string> results = new List<string>();
+            List<string> results = new List<string>(); 
+            List<string> myResults = new List<string>();
             List<char> temp = new List<char>();
             for(int i = 0; i < str.Length; i++)
             {
@@ -26,11 +27,12 @@ namespace CLHCodeChallenge
             }
             for(int i = 0; i < results.Count; i++)
             {
-                int x = results[i].IndexOfAny('');
-                results[i].Replace(' ', '\0');
+                var myStr = results[i].Split(' ');
+                var myResult = string.Join("", myStr.ToArray());
+                myResults.Add(myResult)
             }
           
-            var result = string.Join(",", results.ToArray());
+            var result = string.Join(",", myResults.ToArray());
 
             return $"[\"{result}\"]";
         }
