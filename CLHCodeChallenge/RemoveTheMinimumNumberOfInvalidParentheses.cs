@@ -14,13 +14,17 @@ namespace CLHCodeChallenge
             var str = input.ToCharArray();
             List<string> results = new List<string>(); 
             List<string> myResults = new List<string>();
-            if (IsValid(str))
+            
+            for (int i = 0; i < str.Length; i++)
             {
-                result = string.Join("", str);
-            }
-            else
-            {
-                for (int i = 0; i < str.Length; i++)
+                if (i == 0)
+                {
+                    if (IsValid(str))
+                    {
+                        results.Add(string.Join("", str));
+                    }
+                }
+                if(str[i] == '(' || str[i] == ')')
                 {
                     str[i] = ' ';
 
@@ -30,21 +34,21 @@ namespace CLHCodeChallenge
                     }
                     str[i] = input[i];
                 }
-                for (int i = 0; i < results.Count; i++)
+                
+            }
+            for (int i = 0; i < results.Count; i++)
+            {
+                var myStr = results[i].Split(' ');
+                var myResult = string.Join("", myStr.ToArray());
+                if (!myResults.Contains(myResult))
                 {
-                    var myStr = results[i].Split(' ');
-                    var myResult = string.Join("", myStr.ToArray());
-                    if (!myResults.Contains(myResult))
-                    {
-                        myResults.Add(myResult);
-                    }
-
+                    myResults.Add(myResult);
                 }
 
-                result = string.Join(",", myResults.ToArray());
             }
-            
 
+            result = string.Join(",", myResults.ToArray());
+            
             return $"[\"{result}\"]";
         }
 
