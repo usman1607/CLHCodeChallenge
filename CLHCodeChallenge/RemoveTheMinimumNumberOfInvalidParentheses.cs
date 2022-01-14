@@ -29,7 +29,11 @@ namespace CLHCodeChallenge
             {
                 var myStr = results[i].Split(' ');
                 var myResult = string.Join("", myStr.ToArray());
-                myResults.Add(myResult)
+                if (!myResults.Contains(myResult))
+                {
+                    myResults.Add(myResult);
+                }
+                
             }
           
             var result = string.Join(",", myResults.ToArray());

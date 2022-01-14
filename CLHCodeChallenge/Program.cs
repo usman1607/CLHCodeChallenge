@@ -55,7 +55,7 @@ namespace CLHCodeChallenge
             //Console.WriteLine(DuplicateSubStringWithLongestPossibleLength.LongestDuplicatedSubstring("abaaauiuyabaaa"));
 
 
-            Console.WriteLine(RemoveTheMinimumNumberOfInvalidParentheses.AllPossibleResult("(a)())()"));
+            Console.WriteLine(RemoveTheMinimumNumberOfInvalidParentheses.AllPossibleResult(")("));
 
         }
 
