@@ -10,33 +10,40 @@ namespace CLHCodeChallenge
     {
         public static string AllPossibleResult(string input)
         {
-            Console.WriteLine(input);
+            string result;
             var str = input.ToCharArray();
             List<string> results = new List<string>(); 
             List<string> myResults = new List<string>();
-            List<char> temp = new List<char>();
-            for(int i = 0; i < str.Length; i++)
+            if (IsValid(str))
             {
-                str[i] = ' ';
+                result = string.Join("", str);
+            }
+            else
+            {
+                for (int i = 0; i < str.Length; i++)
+                {
+                    str[i] = ' ';
 
-                if (IsValid(str))
-                {
-                    results.Add(string.Join("", str));
+                    if (IsValid(str))
+                    {
+                        results.Add(string.Join("", str));
+                    }
+                    str[i] = input[i];
                 }
-                str[i] = input[i];
-            }
-            for(int i = 0; i < results.Count; i++)
-            {
-                var myStr = results[i].Split(' ');
-                var myResult = string.Join("", myStr.ToArray());
-                if (!myResults.Contains(myResult))
+                for (int i = 0; i < results.Count; i++)
                 {
-                    myResults.Add(myResult);
+                    var myStr = results[i].Split(' ');
+                    var myResult = string.Join("", myStr.ToArray());
+                    if (!myResults.Contains(myResult))
+                    {
+                        myResults.Add(myResult);
+                    }
+
                 }
-                
+
+                result = string.Join(",", myResults.ToArray());
             }
-          
-            var result = string.Join(",", myResults.ToArray());
+            
 
             return $"[\"{result}\"]";
         }
