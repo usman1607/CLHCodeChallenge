@@ -52,8 +52,10 @@ namespace CLHCodeChallenge
             //abaaauiuyabaaa
             //banana  baibai
             //var input = "abcd";
-            Console.WriteLine(DuplicateSubStringWithLongestPossibleLength.LongestDuplicatedSubstring("abaaauiuyabaaa"));
+            //Console.WriteLine(DuplicateSubStringWithLongestPossibleLength.LongestDuplicatedSubstring("abaaauiuyabaaa"));
 
+
+            Console.WriteLine(RemoveTheMinimumNumberOfInvalidParentheses.AllPossibleResult("()())()"));
 
         }
 
