@@ -10,29 +10,35 @@ namespace CLHCodeChallenge
     {
         public static string AllPossibleResult(string input)
         {
-            var str = input.ToList();
+            Console.WriteLine(input);
+            var str = input.ToCharArray();
             List<string> results = new List<string>();
-            for(int i = 0; i < str.Count; i++)
+            List<char> temp = new List<char>();
+            for(int i = 0; i < str.Length; i++)
             {
-                Console.WriteLine(str.ToString());
-                str.Remove(str[i]);
-                Console.WriteLine(str.ToString());
+                str[i] = ' ';
 
                 if (IsValid(str))
                 {
-                    results.Add(str.ToString());
+                    results.Add(string.Join("", str));
                 }
+                str[i] = input[i];
             }
-
+            for(int i = 0; i < results.Count; i++)
+            {
+                int x = results[i].IndexOfAny('');
+                results[i].Replace(' ', '\0');
+            }
+          
             var result = string.Join(",", results.ToArray());
 
             return $"[\"{result}\"]";
         }
 
-        private static bool IsValid(List<char> subString)
+        private static bool IsValid(char[] subString)
         {
             int count = 0;
-            for (int i = 0; i < subString.Count; i++)
+            for (int i = 0; i < subString.Length; i++)
             {
                 if (subString[i] == '(')
                 {
