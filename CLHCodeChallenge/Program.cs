@@ -42,8 +42,17 @@ namespace CLHCodeChallenge
 
             //int[] input = { 1, 2, 6, 4, 8, 3, 5, 0, 7 };
             //int[] input = { 0,1 };
-            int[] input = { 1, 0, 3 };
-            Console.WriteLine(MissingNumberInTheRang.MissingNumber(input));
+            //int[] input = { 1, 0, 3 };
+            // Console.WriteLine(MissingNumberInTheRang.MissingNumber(input));
+
+
+            /* DateTime date = DateTime.Parse("2020-05-19T12:30:56.000Z");
+             Console.WriteLine(date);*/
+
+            //abaaauiuyabaaa
+            //banana  baibai
+            //var input = "abcd";
+            Console.WriteLine(DuplicateSubStringWithLongestPossibleLength.LongestDuplicatedSubstring("abaaauiuyabaaa"));
 
 
         }
