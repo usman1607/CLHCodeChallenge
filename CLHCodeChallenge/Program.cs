@@ -97,6 +97,44 @@ namespace CLHCodeChallenge
 
         }
 
+        public static bool EqualArray()
+        {
+            Console.WriteLine("Enter the Size of first array");
+            int value1 = int.Parse(Console.ReadLine());
+            int[] arr1 = new int[value1];
+            for (int i = 0; i < value1; i++)
+            {
+                Console.Write($"Enter element at index {i}: ");
+                arr1[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine(string.Join(" ", arr1));
+
+            Console.WriteLine("Enter the Size of second array");
+            int value2 = int.Parse(Console.ReadLine());
+            int[] arr2 = new int[value2];
+            for (int i = 0; i < value2; i++)
+            {
+                Console.Write($"Enter element at index {i}: ");
+                arr2[i] = int.Parse(Console.ReadLine());
+            }
+            Console.WriteLine(string.Join(" ", arr2));
+
+            if (value1 == value2)
+            {
+                for (int i = 0; i < value1; i++)
+                {
+                    if (arr1[i] != arr2[i])
+                    {
+                        return false;
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
 
     }
 }
