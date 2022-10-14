@@ -91,9 +91,11 @@ namespace CLHCodeChallenge
             var shifts = new int[,] { { 0, 0, 0 }, { 1, 1, 1 } };          
             Console.WriteLine(ShiftLetters.Solution(s, shifts));*/
 
-             string s = "aaa";
-             var shifts = new int[] { 1, 2, 3 };
-             Console.WriteLine(ShiftLettersMedium.Solution(s, shifts));
+            /*string s = "aaa";
+            var shifts = new int[] { 1, 2, 3 };
+            Console.WriteLine(ShiftLettersMedium.Solution(s, shifts));*/
+
+            Console.WriteLine(IllegaalCar.Solution("1100101"));
 
         }
 
