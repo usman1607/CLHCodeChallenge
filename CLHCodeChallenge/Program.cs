@@ -75,8 +75,10 @@ namespace CLHCodeChallenge
             /*var array = new int[] { 2, 1, 3, 5, 3, 2 };
             Console.Write(FirstDuplicate.solution(array));*/
 
-            /*var array = new int[] { 10,2,-5 };
-            Console.Write(Asteriods.Solution(array));*/
+            //var array = new int[] { 10,2,-5 };
+            //var array = new int[] { 5,10,-5 };
+            //var array = new int[] { 8,-8 };
+            //Console.Write(Asteriods.Solution(array));
 
             //int[,] array = { { 100, 100 }, { 200, 100 } };
             /*int[,] array = { { 1, 2 }, { 2, 3 }, { 6, 1 }, { 4, 3 } };            
@@ -95,7 +97,11 @@ namespace CLHCodeChallenge
             var shifts = new int[] { 1, 2, 3 };
             Console.WriteLine(ShiftLettersMedium.Solution(s, shifts));*/
 
-            Console.WriteLine(IllegaalCar.Solution("1100101"));
+            //Console.WriteLine(IllegaalCar.Solution("1100101"));
+
+            Console.WriteLine(UniqueDigits.Solution(3));
+
+        
 
         }
 
