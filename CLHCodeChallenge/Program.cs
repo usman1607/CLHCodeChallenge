@@ -99,9 +99,32 @@ namespace CLHCodeChallenge
 
             //Console.WriteLine(IllegaalCar.Solution("1100101"));
 
-            Console.WriteLine(UniqueDigits.Solution(3));
+            //Console.WriteLine(UniqueDigits.Solution(3));
 
-        
+            //var input = new int[,] { { 1, 2 }, { 2, 3 }, { 3, 4 }, { 4, 5 }, { 5, 6 }, };
+            //var input = new int[,] { { 3, 7 }, { 2, 5 } };
+            //var input = new int[,] { { 4, 6 }, { 2, 5 } };
+            //var input = new int[,] { { 1, 4 }, { 3, 5 } };
+            //var input = new int[,] { { 1, 4 }, { 4, 5 } };
+            var input = new int[,] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
+            var ans = MergeOverlappingIntervals.Solution(input);
+            Console.Write("["); int count = 1;
+            var dd = ans.Length;
+            foreach(var pair in ans)
+            {                
+                Console.Write("[");
+                Console.Write($"{string.Join(",", pair)}"); 
+                if(count < ans.Length)
+                {
+                    Console.Write("],");
+                }
+                else
+                {
+                    Console.Write("]");
+                }
+                count++;
+            }
+            Console.Write("]");
 
         }
 
