@@ -106,8 +106,8 @@ namespace CLHCodeChallenge
             //var input = new int[,] { { 4, 6 }, { 2, 5 } };
             //var input = new int[,] { { 1, 4 }, { 3, 5 } };
             //var input = new int[,] { { 1, 4 }, { 4, 5 } };
-            var input = new int[,] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
-            var ans = MergeOverlappingIntervals.Solution(input);
+            //var input = new int[,] { { 1, 3 }, { 2, 6 }, { 8, 10 }, { 15, 18 } };
+            /*var ans = MergeOverlappingIntervals.Solution(input);
             Console.Write("["); int count = 1;
             var dd = ans.Length;
             foreach(var pair in ans)
@@ -124,7 +124,7 @@ namespace CLHCodeChallenge
                 }
                 count++;
             }
-            Console.Write("]");
+            Console.Write("]");*/
 
         }
 
