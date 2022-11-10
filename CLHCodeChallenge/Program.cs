@@ -126,6 +126,8 @@ namespace CLHCodeChallenge
             }
             Console.Write("]");*/
 
+            Console.WriteLine(ToggleBulbs.Solution(14));
+
         }
 
         public static bool EqualArray()
