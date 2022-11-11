@@ -126,7 +126,10 @@ namespace CLHCodeChallenge
             }
             Console.Write("]");*/
 
-            Console.WriteLine(ToggleBulbs.Solution(14));
+            //Console.WriteLine(ToggleBulbs.Solution(14));
+
+            var input = new int[] { 2, 17, 9, 3, 1 };
+            Console.WriteLine(ProfessionalRobber.Solution(input));
 
         }
 
