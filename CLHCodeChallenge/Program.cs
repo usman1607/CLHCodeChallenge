@@ -133,8 +133,10 @@ namespace CLHCodeChallenge
 
             //var input = new int[] { 2, 3, 2 };
             //var input = new int[] { 1, 2, 3, 1, 3 };
-            var input = new int[] { 1, 2, 3 };
-            Console.WriteLine(ProfessionalRobberCircle.Solution(input));
+            //var input = new int[] { 1, 2, 3 };
+            //Console.WriteLine(ProfessionalRobberCircle.Solution(input));
+
+
 
         }
 
