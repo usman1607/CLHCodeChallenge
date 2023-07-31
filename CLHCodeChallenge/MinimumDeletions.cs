@@ -54,9 +54,9 @@ namespace CLHCodeChallenge
                 }
             }
 
-            var list = new List<int>(dic.Values);
-            var set = new HashSet<int>();
-            foreach(var value in list)
+            //var list = new List<int>(dic.Values);
+            var set = new List<int>();
+            foreach(var value in dic.Values)
             {
                 if (!set.Contains(value))
                 {

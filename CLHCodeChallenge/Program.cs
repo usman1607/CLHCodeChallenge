@@ -136,7 +136,12 @@ namespace CLHCodeChallenge
             //var input = new int[] { 1, 2, 3 };
             //Console.WriteLine(ProfessionalRobberCircle.Solution(input));
 
+            //Console.WriteLine(MinimumDeletions.Solution("ceabaacb"));
 
+
+            Console.WriteLine(LongestSubstringWithoutRepeatingCharacters.Solution(" "));
+
+            
 
         }
 
