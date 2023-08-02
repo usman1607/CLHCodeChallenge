@@ -142,6 +142,19 @@ namespace CLHCodeChallenge
 
             //Console.WriteLine(BestTimeToSell.Solution(new int[] { 7, 1, 5, 3, 6, 4 }));
 
+
+            var test = new int[] { 0, 1, 1 };
+            var test2 = new int[] { -1, 0, 1, 2, -1, -4 };
+            var test3 = new int[] { 0, 0, 0 };
+            var ans = ThreeSum.Solution(test3);
+            Console.Write("[");
+            for(int i = 0; i < ans.Count; i++)
+            {                
+                Console.Write($"[{string.Join(",", ans[i])}]");
+                if(i != ans.Count - 1) Console.Write(",");
+            }
+            Console.Write("]");
+
         }
 
         public static bool EqualArray()
