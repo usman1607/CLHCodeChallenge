@@ -138,10 +138,9 @@ namespace CLHCodeChallenge
 
             //Console.WriteLine(MinimumDeletions.Solution("ceabaacb"));
 
+            //Console.WriteLine(LongestSubstringWithoutRepeatingCharacters.Solution(" "));
 
-            Console.WriteLine(LongestSubstringWithoutRepeatingCharacters.Solution(" "));
-
-            
+            //Console.WriteLine(BestTimeToSell.Solution(new int[] { 7, 1, 5, 3, 6, 4 }));
 
         }
 
