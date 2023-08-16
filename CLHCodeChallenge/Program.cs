@@ -155,8 +155,18 @@ namespace CLHCodeChallenge
             }
             Console.Write("]");char s = '2'; Console.Write(Char.IsNumber(s)); Console.Write(Char.IsLetter(s));*/
 
-            var strs = new string[] { "zzz", "zzz", "zzzz", "zzaoooiio", "zzz" };
-            Console.Write(LongestCommonPrefix.Solution(strs));
+            //var strs = new string[] { "zzz", "zzz", "zzzz", "zzaoooiio", "zzz" };
+            //Console.Write(LongestCommonPrefix.Solution(strs));
+
+            //Console.WriteLine(ReverseInt.Solution(1534236469));
+
+            //"leetcode", wordDict = ["leet", "code"]
+            //"leetcode", new string[] { "leet", "code" }
+            //"aaaaaaa" ["aaaa","aaa"]
+            //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab  ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]
+            // "aaaaaa" ["aa","a"]
+            Console.WriteLine(WordBreak.wordBreak("aaaaaa", new string[] { "aa", "a" }));
+
 
         }
 

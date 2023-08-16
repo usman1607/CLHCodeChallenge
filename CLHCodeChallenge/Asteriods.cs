@@ -47,8 +47,7 @@ namespace CLHCodeChallenge
                         else if (arr[j] > 0)
                         {
                             break;
-                        }
-                        
+                        }                        
                     }
                 }
                 else if(arr[i] < 0)
