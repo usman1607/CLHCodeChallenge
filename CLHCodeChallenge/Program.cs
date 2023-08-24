@@ -165,7 +165,13 @@ namespace CLHCodeChallenge
             //"aaaaaaa" ["aaaa","aaa"]
             //aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab  ["a","aa","aaa","aaaa","aaaaa","aaaaaa","aaaaaaa","aaaaaaaa","aaaaaaaaa","aaaaaaaaaa"]
             // "aaaaaa" ["aa","a"]
-            Console.WriteLine(WordBreak.wordBreak("aaaaaa", new string[] { "aa", "a" }));
+            //Console.WriteLine(WordBreak.wordBreak("aaaaaa", new string[] { "aa", "a" }));
+
+            //int[] nums = new int[] { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
+            //Console.WriteLine(LongestConsecutiveSequence.Solution(nums));
+
+            Console.WriteLine(RepeatedSubstringPattern.Solution("ababab"));
+
 
 
         }
