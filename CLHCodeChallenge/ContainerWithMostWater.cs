@@ -58,6 +58,7 @@ namespace CLHCodeChallenge
                 }
             }
             return max;
+
         }
     }
 }
