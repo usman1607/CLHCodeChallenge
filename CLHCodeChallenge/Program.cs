@@ -170,7 +170,12 @@ namespace CLHCodeChallenge
             //int[] nums = new int[] { 0, 3, 7, 2, 5, 8, 4, 6, 0, 1 };
             //Console.WriteLine(LongestConsecutiveSequence.Solution(nums));
 
-            Console.WriteLine(RepeatedSubstringPattern.Solution("ababab"));
+            //Console.WriteLine(RepeatedSubstringPattern.Solution("ababab"));
+
+
+            //Console.WriteLine(StringToInteger_atoi.Solution("2147483648"));
+
+            Console.WriteLine(JumpGame.Solution(new int[] { 1, 0, 1, 0 }));
 
 
 
