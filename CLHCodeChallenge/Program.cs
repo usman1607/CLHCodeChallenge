@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 
 namespace CLHCodeChallenge
@@ -175,7 +176,11 @@ namespace CLHCodeChallenge
 
             //Console.WriteLine(StringToInteger_atoi.Solution("2147483648"));
 
-            Console.WriteLine(JumpGame.Solution(new int[] { 1, 0, 1, 0 }));
+            //Console.WriteLine(JumpGame.Solution(new int[] { 1, 0, 1, 0 }));
+
+            Console.WriteLine(ReorganizeString.Solution("vdjvevvvs"));
+
+            
 
 
 
