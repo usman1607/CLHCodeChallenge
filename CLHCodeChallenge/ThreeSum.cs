@@ -55,7 +55,7 @@ namespace CLHCodeChallenge
             {
                 nums[y] = myNums.Dequeue();
             }
-
+           
             for (int i = 0; i < nums.Length; i++)
             {
                 for (int j = i + 1; j < nums.Length; j++)
@@ -65,12 +65,49 @@ namespace CLHCodeChallenge
                         if (nums[i] + nums[j] + nums[k] == 0)
                         {
                             var l = new List<int>() { nums[i], nums[j], nums[k] };
-                            if( !ans.Any(x => x[0] == l[0] && x[1] == l[1] && x[2] == l[2]) )  ans.Add(l);
+                            if (!ans.Any(x => x[0] == l[0] && x[1] == l[1] && x[2] == l[2])) ans.Add(l);
                         }
+                        
+                    }
+                }
+            }
+            return ans;
+        }
+
+        //More efficent solution...
+        public static List<int[]> Solution2(int[] nums)
+        {
+            Array.Sort(nums);
+            var len = nums.Length;
+            List<int[]> ans = new List<int[]>();
+            int low, high, sum;
+            for (int i = 0; i < len - 2; i++)
+            {
+                low = i + 1; high = len - 1;
+                while (low < high)
+                {
+                    sum = nums[i] + nums[low] + nums[high];
+                    if (sum == 0)
+                    {
+                        if (!ans.Any(x => x[0] == nums[i] && x[1] == nums[low] && x[2] == nums[high]))
+                        {
+                            ans.Add(new int[3] { nums[i], nums[low], nums[high] });
+                        }
+                        low++;
+                    }
+                    else if (sum < 0)
+                    {
+                        low++;
+                    }
+                    else
+                    {
+                        high--;
                     }
                 }
             }
             return ans;
         }
     }
+
+    
 }
