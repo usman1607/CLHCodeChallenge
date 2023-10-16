@@ -144,7 +144,7 @@ namespace CLHCodeChallenge
             //Console.WriteLine(BestTimeToSell.Solution(new int[] { 7, 1, 5, 3, 6, 4 }));
 
 
-            var test = new int[] { 0, 1, 1 };
+            /*var test = new int[] { 0, 1, 1 };
             var test2 = new int[] { -1, 0, 1, 2, -1, -4 };
             var test3 = new int[] { 0, 0, 0 };
             var test5 = new int[] { 4, -9, -13, -9, 0, -12, 12, -14, 12, 1, 3, 5, 5, 8, 2, -2, 8, 1, 2, -6, -6, 1, 6, -15, -2, 7, -11, 3, -2, 1, 11, 10, 8, 14, 8, -15, 9, 5, -14, 6, 14, -3, -12, 4, -10, 5, -12, 13, 14, -3, -15, -7, 5, -2, -15, 10, -10, 11, -2, -5, -2, -5, -10, 13, -14, 14, 13, 2, 4, 7, -6, 3, 11, -3, -15, -14, 10, 10, 6, 1, -8, -2, 1, 12, 11, 1, 7, 8, -10, 13, -11, 3, -15, -6, -7, 8, -7, 13, -5, 5, -3, 4, -15, -7, 9, -15, -14, -4, 2, 0, 4, 9, 13, -10, -2, 10 };
@@ -156,7 +156,9 @@ namespace CLHCodeChallenge
                 Console.Write($"[{string.Join(",", ans[i])}]");
                 if(i != ans.Length - 1) Console.Write(",");
             }
-            Console.Write("]");
+            Console.Write("]");*/
+
+            //Console.WriteLine(Candy.Solution(new int[] { 1, 2, 3, 1, 0 }));
 
             
 
@@ -184,6 +186,16 @@ namespace CLHCodeChallenge
             //Console.WriteLine(JumpGame.Solution(new int[] { 1, 0, 1, 0 }));
 
             //Console.WriteLine(ReorganizeString.Solution("vdjvevvvs"));
+            
+            
+            //Console.WriteLine(ZigzagConversion.Solution("PAYPALISHIRING", 1));
+
+            //Console.WriteLine(RegularExpressionMatching.Solution("ab", ".*c"));
+            
+            //Console.WriteLine(ThreeSumClosest.Solution(new int[] { 4, 0, 5, -5, 3, 3, 0, -4, -5 }, -2));
+            
+            
+            Console.WriteLine(QueueSequence.Solution(2));
 
             
 
